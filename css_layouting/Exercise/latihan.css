@@ -1,0 +1,151 @@
+/* <!-- CSS RESET --> */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CLEAR FIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table; 
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* CSS */
+
+.container {
+width: 900px;
+margin: 0 auto;
+}
+
+nav{
+    background-color: blue;
+    color: aliceblue;
+}
+
+.judul{
+    display: inline-block;
+    font-size: 35px;
+    padding: 5px;
+}
+
+.link{
+    display: inline-block;
+    float: right;
+    padding: 12px;
+}
+
+li{
+    display: inline-block;
+}
+
+a:active{
+    color: aliceblue;
+}
+
+a:hover{
+    color: rgb(125, 129, 133);
+}
+
+a:visited{
+    color: aliceblue;
+}
+
+a:link{
+    color: aliceblue;
+}
+a{
+    text-decoration: none;
+}
+
+.hero{
+    background-image: url('img/hero.jpg');
+    height: 300px;
+}
+
+.content_left{
+    float: left;
+    padding: 5px;
+    width: 490px;
+}
+
+.content_left h2{
+    font-size: 50px;
+}
+
+.content_right h2{
+    font-size: 25px;
+    padding-top: 10px;
+}
+.content_right{
+    float: right;
+    width: 390px;
+}
+
+.content_right img{
+    width: 100px;
+}
+
+footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    height: 50px;
+    margin: auto;
+}
+
+
+
+
+
+
+

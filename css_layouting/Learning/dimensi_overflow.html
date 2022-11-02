@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dimensi</title>
+    <style>
+        .px {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            color: aliceblue;
+        }
+
+        .persen {
+            width: 50%;
+            background-color: rgb(238, 18, 18);
+            color: aliceblue;
+        }
+        .persen2 {
+            width: 120%;
+            background-color: rgb(18, 176, 238);
+            color: aliceblue;
+        }
+        .visible{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(102, 255, 0);
+            color: rgb(0, 0, 0);
+        }
+        .auto{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(102, 255, 0);
+            color: rgb(0, 0, 0);
+            overflow: auto;
+        }
+        .scroll{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(102, 255, 0);
+            color: rgb(0, 0, 0);
+            overflow: scroll;
+        }
+        div, h3, p, .px, .auto, .scroll{
+            display: inline-block;
+        }
+        h3{
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Dimensi</h2>
+    <div class="px">
+        <div class="persen">Hello Word 50%</div>
+        <div class="persen2">Hello Word 120%</div>
+    </div>
+
+    <h2>Overflow</h2>
+    <h3>visible</h3>
+    <div class="visible">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, amet aliquid corporis eligendi dicta illo recusandae sunt consequuntur maxime optio veniam ducimus repellat voluptatibus soluta porro incidunt deleniti architecto dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, iste. Saepe cumque facilis incidunt? Doloremque neque dolorum enim earum in dolore molestias impedit voluptate nisi facere! Soluta perspiciatis dolore eos!</p>
+    </div>
+
+    <h3>Auto</h3>
+    <div class="auto">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, maiores nostrum ea eum quasi tenetur tempora, reiciendis reprehenderit dignissimos veniam itaque necessitatibus, ullam temporibus? Ex nulla mollitia repellat amet veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsum vel eum tempore accusantium rem non tenetur neque, molestiae possimus placeat deserunt quas iusto doloremque excepturi cum voluptas vero eius!</p>
+    </div>
+   
+    <h3>Scroll</h3>
+    <div class="scroll">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, maio
+    </div>
+
+</html>

@@ -1,0 +1,133 @@
+/* CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CLEAR FIX */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+h1{
+    font-size: 50px;
+    color: white;
+}
+
+.container{
+    width: 913px;
+    margin: auto;
+    height: 1112px;
+    border: 1px solid black;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.header{
+    height: 250px;
+    background-color: blueviolet;
+    text-align: center;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+.content_left{
+    float: left;
+    height: 750px;
+    width: 350px;
+}
+
+.content_right{
+    float: right;
+    height: 750px;
+    width: 550px;
+    background-color: orange;
+    text-align: center;
+    padding-top: 300px;
+    box-sizing: border-box;
+
+}
+
+.aside{
+    height: 250px;
+    background-color: skyblue;
+    text-align: center;
+    padding-top: 100px;
+    box-sizing: border-box;
+
+}
+
+.nav{
+    height: 500px;
+    background-color: red;
+    text-align: center;
+    padding-top: 250px;
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: darkgrey;
+    height: 100px;
+    padding-top: 20px;
+    text-align: center;;
+    box-sizing: border-box;
+}
+
+
+

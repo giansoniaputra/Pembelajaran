@@ -1,0 +1,175 @@
+/* Css Reset ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, img,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Property Tambahan -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    /* Warna Text */
+.text-putih{
+    color: white;
+}
+
+.text-hitam{
+    color: black;
+}
+
+    /* Width */
+.width-100px{
+    width: 100px;
+}
+
+.width-200px{
+    width: 200px;
+}
+
+.width-300px{
+    width: 300px;
+}
+
+.width-400px{
+    width: 400px;
+}
+
+.width-500px{
+    width: 500px;
+}
+
+.width-600px{
+    width: 600px;
+}
+
+    /* Height */
+.height-100px{
+    height: 100px;
+}
+
+.height-200px{
+    height: 200px;
+}
+
+.height-300px{
+    height: 300px;
+}
+
+.height-400px{
+    height: 400px;
+}
+
+.height-500px{
+    height: 500px;
+}
+
+.height-600px{
+    height: 600px;
+}
+
+.height-600px{
+    height: 600px;
+}
+
+    /* Background-Color */
+.putih{
+    background-color: white;
+}
+
+.hitam{
+    background-color: black;
+}
+
+.pink{
+    background-color: #ff00ff;
+}
+
+.biru{
+    background-color: blue;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+body{
+    background-image: url('img/bg.png');
+    background-size: cover;
+}
+.container{
+    width: 1000px;
+    margin: 0px auto;
+}
+
+.hero{
+    background-image: url('img/hero.jpg');
+    background-size: cover;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.ul, li{
+    display: inline-block;
+}
+
+nav{
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+h1{
+    padding: 6px;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+.judul{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 0px 10px;
+}
+
+h2{
+    text-align: center;
+}
+
+.fotter{
+    margin-top: 20px;
+    padding: 1px;
+}
+
+.content{
+    padding: 0px 10px;
+}

@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+}
+.container{
+    width: 60%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,100px);
+    border: 5px solid #000;
+
+}
+
+.item{
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item:nth-child(even){
+    background-color: salmon;
+}

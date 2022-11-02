@@ -1,0 +1,49 @@
+.container{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    border: 5px solid black;
+    padding: 5px;
+}
+
+header{
+    background-color: blueviolet;
+    padding: 100px;
+}
+
+aside{
+    background-color: skyblue;
+    padding: 100px;
+}
+
+nav{
+    background-color: red;
+    padding: 100px;
+}
+
+.main{
+    background-color: orange;
+    padding: 200px;
+    order:1;
+    display: flex;
+    flex: 0.7;
+    justify-content: center;
+    align-items: center;;
+}
+
+footer{
+    background-color: #ddd;
+    padding: 5px;
+}
+
+.content{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.left{
+    order:2;
+    flex: 0.3;
+}
+
+

@@ -1,0 +1,312 @@
+/* Css Reset ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Property Tambahan -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    /* Warna Text */
+.text-putih{
+    color: white;
+}
+
+.text-hitam{
+    color: black;
+}
+
+    /* Width */
+.width-100px{
+    width: 100px;
+}
+
+.width-200px{
+    width: 200px;
+}
+
+.width-300px{
+    width: 300px;
+}
+
+.width-400px{
+    width: 400px;
+}
+
+.width-500px{
+    width: 500px;
+}
+
+.width-600px{
+    width: 600px;
+}
+
+    /* Height */
+.height-100px{
+    height: 100px;
+}
+
+.height-200px{
+    height: 200px;
+}
+
+.height-300px{
+    height: 300px;
+}
+
+.height-400px{
+    height: 400px;
+}
+
+.height-500px{
+    height: 500px;
+}
+
+.height-600px{
+    height: 600px;
+}
+
+.height-600px{
+    height: 600px;
+}
+
+    /* Background-Color */
+.putih{
+    background-color: white;
+}
+
+.hitam{
+    background-color: black;
+}
+
+.pink{
+    background-color: #ff00ff;
+}
+
+.biru{
+    background-color: blue;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---- MARGIN -----*/
+div{
+    color: aliceblue;
+}
+
+/* Satu */
+.satu{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 150px;
+    margin-right: 50px;
+}
+.dua{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(113, 173, 173);
+}
+.tiga{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(146, 17, 172);
+}
+/* Dua */
+
+.satu2{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    margin-right: 30px;
+}
+.dua2{
+    width: 150px;
+    height: 100px;
+    background-color: rgb(113, 173, 173);
+    margin-left: 20px;
+}
+.tiga2{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(146, 17, 172);
+}
+
+.satu2, .dua2, .tiga2{
+    display: inline-block;
+}
+
+/* Tiga */
+
+.satu3{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    margin-bottom: 30px;
+}
+.dua3{
+    width: 150px;
+    height: 100px;
+    background-color: rgb(113, 173, 173);
+    margin-top: -50px;
+}
+.tiga3{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(146, 17, 172);
+}
+
+/* Empat */
+.satu4  {
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.dua4   {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(113, 173, 173);
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.tiga4  {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(146, 17, 172);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---- AKHIR MARGIN -----*/
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ----- PEDDING ----- */
+
+    /* Padding & Border */
+.padding1{
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: rgb(0, 0, 0);
+
+    padding: 20px ;
+
+    border: 30px dotted red;
+}
+
+.padding2{
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: rgb(0, 0, 0);
+
+    padding: 20px ;
+
+    border-right: 30px dotted red;
+}
+
+
+.padding3{
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: rgb(0, 0, 0);
+
+    padding: 20px ;
+
+    border-left: 30px dotted red;
+}
+
+.padding1, .padding2, .padding3{
+    display: inline-block;
+}
+
+    /* Box-Sizing */
+.sizing1, .sizing2{
+    margin: 10px auto;
+    box-sizing: border-box;
+
+}
+
+.sizing1 {
+    padding: 50px;
+}
+
+.sizing2 {
+    padding: 100px;
+}
+
+
+/* ----- AKHIR PEDDING -----*/
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ----- FLOAT -----*/
+
+.container{
+    width: 800px;
+    margin: auto;
+    border: 1px solid #000;
+    color: black;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+img{
+    float: right;
+}
+
+.kotak {
+    width: 80px;
+    height: 80px;
+    background-color: salmon;
+    text-align: center;
+    line-height: 80px;
+    float: left;
+    margin: 5px;
+}
+
+/* ----- AKHIR FLOAT -----*/

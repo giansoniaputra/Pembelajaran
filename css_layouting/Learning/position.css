@@ -1,0 +1,71 @@
+/* RELATIVE */
+.satu{
+    background-color: lightgreen;
+}
+
+.dua{
+    background-color: violet;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.tiga{
+    background-color: gold;
+}
+
+div{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+/* ABSOLUTE */
+
+.empat{
+    background-color: lightgreen;
+}
+
+.lima{
+    background-color: violet;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.enam{
+    background-color: gold;
+}
+
+.container{
+    width: 600px;
+    height: 900px;
+    border: 1px solid red;
+    position: relative;
+    
+}
+
+/* FIXED */
+
+.tujuh{
+    background-color: lightgreen;
+}
+
+.delapan{
+    background-color: violet;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sembilan{
+    background-color: gold;
+}
+
+
+
+
+
+
