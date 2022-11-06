@@ -20,4 +20,6 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
+        <p>Hallo Nama saya <?= $data['nama']; ?></p>
     </div>
