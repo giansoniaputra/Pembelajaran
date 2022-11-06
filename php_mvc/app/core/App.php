@@ -1,6 +1,6 @@
 <?php 
 class App{
-    protected $controller = 'Home', $method = 'index', $params = [];
+    protected $controller = 'home', $method = 'index', $params = [];
 
     public function __construct(){
         $url = $this->parseUrl();
