@@ -29,7 +29,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?= BASEURL ?>/mahasiswa/tambah" method="post">
+                <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
                     <!-- Nama -->
                     <div class="mb-3">
                         <label for="Nama" class="form-label">Nama :</label>
@@ -37,7 +37,7 @@
                     </div>
                     <!-- NPM -->
                     <div class="mb-3">
-                        <label for="NPM" class="form-label">NPMs</label>
+                        <label for="NPM" class="form-label">NPM</label>
                         <input type="number" class="form-control" id="NPM" placeholder="Masukan NPM Mahasiswa" name="NPM" required>
                     </div>
                     <!-- Email -->
