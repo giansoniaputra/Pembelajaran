@@ -12,6 +12,7 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <?= $mhs['Nama']; ?>
                         <a href="<?= BASEURL ?>/mahasiswa/detail/<?= $mhs['id'] ?>" class="badge text-bg-primary">Details</a>
+                        <a href="<?= BASEURL ?>/mahasiswa/hapus/<?= $mhs['id'] ?>" class="badge text-bg-primary">Delete</a>
                     </li>
                 <?php endforeach; ?>
             </ul>

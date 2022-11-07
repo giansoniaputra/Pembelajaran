@@ -26,4 +26,12 @@ class Mahasiswa extends Controller{
             exit;
         }
     }
+
+    public function hapus($id){
+        // var_dump($_POST);die;
+        if ($this->model('Mahasiswa_model')->hapusDataMahasiswa($id) > 0) {
+            header('Location :' . BASEURL . '/mahasiswa/index');
+            exit;
+        }
+    }
 }
