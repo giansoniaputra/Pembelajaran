@@ -18,4 +18,20 @@ class Mahasiswa extends Controller{
         $this->view('mahasiswa/detail', $data);
         $this->view('templates/footer');
     }
+
+    public function tambah(){
+        // var_dump($_POST);die;
+        if ($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST) > 0) {
+            header('Location: ' . BASEURL . '/mahasiswa');
+            exit;
+        }
+    }
+
+    public function hapus($id){
+        // var_dump($_POST);die;
+        if ($this->model('Mahasiswa_model')->hapusDataMahasiswa($id) > 0) {
+            header('Location :' . BASEURL . '/mahasiswa/index');
+            exit;
+        }
+    }
 }
