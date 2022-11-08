@@ -1,7 +1,7 @@
 
-// $(function(){
-//     $( '.tampilModalUbah' ).on('click', function() {
-//         console.log('OKE');
-//     });
-// });
+$(function(){
+    $( '.tampilModalUbah' ).on('click', function() {
+        console.log('OKE');
+    });
+});
 
