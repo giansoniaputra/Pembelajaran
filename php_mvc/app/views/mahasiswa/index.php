@@ -17,6 +17,7 @@
                     <li class="list-group-item ">
                         <?= $mhs['Nama']; ?>
                         <a href="<?= BASEURL ?>/mahasiswa/hapus/<?= $mhs['id'] ?>" class="badge text-bg-danger float-end me-2" onclick="return confirm('Yakin Ingin Menghapus Data?')">Delete</a>
+                        <a href="<?= BASEURL ?>/mahasiswa/ubah/" class="badge text-bg-success float-end me-2 tampilModalUbah" id="tampilModalUbah" data-bs-toggle="modal" data-bs-target="#Modal">Edit</a>
                         <a href="<?= BASEURL ?>/mahasiswa/detail/<?= $mhs['id'] ?>" class="badge text-bg-primary float-end me-2">Details</a>
                     </li>
                 <?php endforeach; ?>
