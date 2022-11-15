@@ -1,46 +1,30 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-<div class="header">
-    <div class="container">
-        <nav>
-            <h2>GIAN SONIA</h2>
-            <div class="list">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href=""> Contact</a></li>
-                    <li><a href="#sosmed">Social Media</a></li>
-                    <li><button type="button" class="btn btn-press">Hire Me+ ✉</button></li>
-                </ul>
-            </div>
-
-        </nav>
-
-        <div class="hero">
-            <div class="judul">
-                <p>------- Gian Sonia</p>
-                <h2>Hello, my name is
-                    Gian Sonia.</h2>
-                <h2>I'm Graphic Designer
-                    and Front End Developer</h2>
-                <a href="https://wa.me/6282321634181" target="_blank"><button type="button" class="btn btn-press">Contact Me
-                        ➡</button></a>
-            </div>
-            <div class="icon">
-                <img src="<?= base_url('/') ?>/img/icon/html5_color.png" alt="">
-                <img src="<?= base_url('/') ?>/img/icon/css_color.png" alt="">
-                <img src="<?= base_url('/') ?>/img/icon/illustrator_color.png" alt="">
-            </div>
-            <div class="png">
-                <img src="<?= base_url('/') ?>/img/gian.png" alt="">
-            </div>
-        </div>
+<div class="hero">
+    <div class="judul">
+        <p>------- Gian Sonia</p>
+        <h2>Hello, my name is
+            Gian Sonia.</h2>
+        <h2>I'm Graphic Designer
+            and Front End Developer</h2>
+        <a href="https://wa.me/6282321634181" target="_blank"><button type="button" class="btn btn-press">Contact Me
+                ➡</button></a>
     </div>
+    <div class="icon">
+        <img src="<?= base_url('/') ?>/img/icon/html5_color.png" alt="">
+        <img src="<?= base_url('/') ?>/img/icon/css_color.png" alt="">
+        <img src="<?= base_url('/') ?>/img/icon/illustrator_color.png" alt="">
+    </div>
+    <div class="png">
+        <img src="<?= base_url('/') ?>/img/gian.png" alt="">
+    </div>
+</div>
+</div>
 </div>
 
 <section class="skill">
-    <div class="container">
+    <div class="containerss">
         <div class="img">
             <i><img src="<?= base_url('/') ?>/img/icon/html.png" alt=""></i>
             <i><img src="<?= base_url('/') ?>/img/icon/css.png" alt=""></i>
@@ -78,7 +62,7 @@
 </section>
 
 <section class="experience">
-    <div class="container">
+    <div class="containerss">
         <p>------- Graphic Designer</p>
         <h2>With 3 years <br> Experience <br> Graphic <br> Designer</h2>
         <p>Selama tiga tahun ini saya telah mengerjakan banyak projek desain <br> diantaranya desain logo,
@@ -111,7 +95,7 @@
 </section>
 
 <section class="portfolio">
-    <div class="container"></div>
+    <div class="containerss"></div>
     <div class="bg">
         <div class="container bag1">
             <p>------- Project</p>
