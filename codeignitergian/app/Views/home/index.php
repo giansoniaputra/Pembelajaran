@@ -1,3 +1,6 @@
+<?= $this->extend('layout/template'); ?>
+
+<?= $this->section('content'); ?>
 <div class="header">
     <div class="container">
         <nav>
@@ -148,6 +151,8 @@
     </div>
 </section>
 
+<?= $this->endSection(); ?>
+
 <!-- <section class="school">
         <div class="foto">
             <img src="img/LRM_EXPORT_313399679268419_20190310_133647796.jpeg" alt="">
@@ -174,11 +179,3 @@
             </div>
         </div>
     </section> -->
-
-
-</body>
-
-
-
-
-</html>

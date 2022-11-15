@@ -9,8 +9,7 @@ class Pages extends BaseController
         $data = [
             'title' => 'Gian Sonia | Web Developer'
         ];
-        echo view('layout/header', $data);
-        echo view('home/index');
-        echo view('layout/footer');
+
+        return view('home/index', $data);
     }
 }
