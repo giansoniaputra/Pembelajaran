@@ -3,7 +3,11 @@
     padding: 0;
 }
 
-.container {
+.table >tbody>tr>*{
+    vertical-align: middle;
+}
+
+.containerss {
     width: 80%;
     position: relative;
 }
