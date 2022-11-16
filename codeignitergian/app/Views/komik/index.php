@@ -2,8 +2,14 @@
 
 <?= $this->section('content'); ?>
 <div class="container-fluid">
+    <h1 class="mt-2 mb-3">Daftar Komik</h1>
+    <a href="/komik/create" class="btn btn-primary mb-3">Tambah Data Komik</a>
+    <?php if (session()->getFlashdata('Pesan')) : ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?= session()->getFlashdata('Pesan'); ?>
+        </div>
+    <?php endif; ?>
     <div class="row">
-        <h1 class="mt-2 mb-3">Daftar Komik</h1>
         <div class="col">
             <table class="table">
                 <thead>
@@ -21,7 +27,7 @@
                             <th scope="row"><?= $i ?></th>
                             <td><img src="/img/<?= $row['sampul']; ?>" width="100px" alt=""></td>
                             <td><?= $row['judul']; ?></td>
-                            <td><a href="/komik/<?= $row['slug']; ?>" class="btn btn-success">Detail</a></td>
+                            <td><a href="/komik/detail/<?= $row['slug']; ?>" class="btn btn-success">Detail</a></td>
                         </tr>
                         <?php $i++; ?>
                     <?php endforeach; ?>
