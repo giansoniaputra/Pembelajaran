@@ -15,13 +15,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i = 1; ?> 
+                    <?php $i = 1; ?>
                     <?php foreach ($komik as $row) : ?>
                         <tr>
                             <th scope="row"><?= $i ?></th>
                             <td><img src="/img/<?= $row['sampul']; ?>" width="100px" alt=""></td>
                             <td><?= $row['judul']; ?></td>
-                            <td><a href="" class="btn btn-success">Detail</a></td>
+                            <td><a href="/komik/<?= $row['slug']; ?>" class="btn btn-success">Detail</a></td>
                         </tr>
                         <?php $i++; ?>
                     <?php endforeach; ?>
