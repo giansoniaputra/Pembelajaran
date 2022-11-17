@@ -19,19 +19,29 @@
                 <div class="row mb-3">
                     <label for="penulis" class="col-sm-2 col-form-label me-5">Penulis</label>
                     <div class="col-sm-10">
-                        <input type="text" name="penulis" class="form-control" id="penulis" value="<?= old('penulis'); ?>">
+                        <input type="text" name="penulis" class="form-control <?= ($validation->hasError('penulis')) ? 'is-invalid' : ''; ?>" id="penulis" value="<?= old('penulis'); ?>">
+                        <div id="validationServer03Feedback" class="invalid-feedback">
+                            <?= $validation->getError('penulis'); ?>
+                        </div>
                     </div>
+
                 </div>
                 <div class="row mb-3">
                     <label for="penerbit" class="col-sm-2 col-form-label me-5">Penerbit</label>
                     <div class="col-sm-10">
-                        <input type="text" name="penerbit" class="form-control" id="penerbit" value="<?= old('penerbit'); ?>">
+                        <input type="text" name="penerbit" class="form-control <?= ($validation->hasError('penulis')) ? 'is-invalid' : ''; ?>" id="penerbit" value="<?= old('penerbit'); ?>">
+                        <div id="validationServer03Feedback" class="invalid-feedback">
+                            <?= $validation->getError('penerbit'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="sampul" class="col-sm-2 col-form-label me-5">sampul</label>
                     <div class="col-sm-10">
-                        <input type="text" name="sampul" class="form-control" id="sampul" value="<?= old('sampul'); ?>">
+                        <input type="text" name="sampul" class="form-control <?= ($validation->hasError('penulis')) ? 'is-invalid' : ''; ?>" id="sampul" value="<?= old('sampul'); ?>">
+                        <div id="validationServer03Feedback" class="invalid-feedback">
+                            <?= $validation->getError('sampul'); ?>
+                        </div>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
