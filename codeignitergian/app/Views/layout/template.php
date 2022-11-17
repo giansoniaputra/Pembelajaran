@@ -22,7 +22,7 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="">About</a></li>
-                        <li><a href="komik">Komik</a></li>
+                        <li><a href="<?= base_url(); ?>/komik">Komik</a></li>
                         <li><a href="#sosmed">Social Media</a></li>
                         <li><button type="button" class="btn btn-press">Hire Me+ ✉</button></li>
                     </ul>
