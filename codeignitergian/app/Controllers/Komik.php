@@ -67,7 +67,28 @@ class Komik extends BaseController
                     'required' => '{field} Komik harus Diisi!',
                     'is_unique' => '{field} Komik sudah Terdaftar!'
                 ]
+
+            ],
+            'penulis' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Komik harus Diisi!'
+                ]
+            ],
+            'penerbit' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Komik harus Diisi!'
+                ]
+            ],
+            'sampul' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Komik harus Diisi!'
+                ]
             ]
+
+
         ])) {
             $validation = \Config\Services::validation();
             // dd($validation);
@@ -84,6 +105,84 @@ class Komik extends BaseController
 
         session()->setFlashdata('Pesan', 'Data Berhasil di Tambahkan.');
 
-        return redirect()->to('/komik');
+        return redirect()->to(base_url() . '/komik');
+    }
+
+    public function delete($id)
+    {
+        $this->komikModel->delete($id);
+        session()->setFlashdata('Pesan', 'Data Berhasil di Hapus.');
+        return redirect()->to(base_url() . '/komik');
+    }
+
+    public function edit($slug)
+    {
+
+        $data = [
+            'title' => 'Ubah Data Komik',
+            'validation' => \Config\Services::validation(),
+            'komik' => $this->komikModel->getKomik($slug)
+        ];
+        // dd($data['komik']);
+        return view('komik/edit', $data);
+    }
+
+    public function update($id)
+    {
+        //Validasi Input
+        //cek judul
+        $komikLama = $this->komikModel->getKomik($this->request->getVar('slug'));
+        if ($komikLama['judul'] == $this->request->getVar('judul')) {
+            $rule_judul = 'required';
+        } else {
+            $rule_judul = 'required|is_unique[komik.judul]';
+        }
+        if (!$this->validate([
+            'judul' => [
+                'rules' => $rule_judul,
+                'errors' => [
+                    'required' => '{field} Komik harus Diisi!',
+                    'is_unique' => '{field} Komik sudah Terdaftar!'
+                ]
+
+            ],
+            'penulis' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Komik harus Diisi!'
+                ]
+            ],
+            'penerbit' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Komik harus Diisi!'
+                ]
+            ],
+            'sampul' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Komik harus Diisi!'
+                ]
+            ]
+
+
+        ])) {
+            $validation = \Config\Services::validation();
+            // dd($validation);
+            return redirect()->to('komik/create')->withInput()->with('validation', $validation);
+        }
+        $slug = url_title($this->request->getVar('judul'), '-', true);
+        $this->komikModel->save([
+            'id' => $id,
+            'judul' => $this->request->getVar('judul'),
+            'slug' => $slug,
+            'penulis' => $this->request->getVar('penulis'),
+            'penerbit' => $this->request->getVar('penerbit'),
+            'sampul' => $this->request->getVar('sampul')
+        ]);
+
+        session()->setFlashdata('Pesan', 'Data Berhasil di Ubah.');
+
+        return redirect()->to(base_url() . '/komik');
     }
 }
