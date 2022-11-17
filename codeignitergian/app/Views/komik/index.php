@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 <div class="container-fluid">
     <h1 class="mt-2 mb-3">Daftar Komik</h1>
-    <a href="/komik/create" class="btn btn-primary mb-3">Tambah Data Komik</a>
+    <a href="<?= base_url(); ?>/komik/create" class="btn btn-primary mb-3">Tambah Data Komik</a>
     <?php if (session()->getFlashdata('Pesan')) : ?>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             <?= session()->getFlashdata('Pesan'); ?>
