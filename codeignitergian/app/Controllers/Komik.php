@@ -82,25 +82,50 @@ class Komik extends BaseController
                 ]
             ],
             'sampul' =>  [
-                'rules' => 'required',
+                'rules' => 'max_size[sampul,1024]|is_image[sampul]|mime_in[sampul,image/jpg,image/jpeg,image/png]',
                 'errors' => [
-                    'required' => '{field} Komik harus Diisi!'
+                    'max_size' => 'Ukuran terlalu besar (Max 1MB)',
+                    'is_image' => 'yang anda pilih bukan gambar',
+                    'mine_in' => 'yang anda pilih bukan gambar'
+
                 ]
             ]
 
 
         ])) {
-            $validation = \Config\Services::validation();
-            // dd($validation);
-            return redirect()->to('komik/create')->withInput()->with('validation', $validation);
+            return redirect()->to('komik/create')->withInput();
         }
+
+        //UPLOAD GAMBAR
+        //Ambil Gambar
+        $fileSampul = $this->request->getFile('sampul');
+
+        //Apakah tifak ada gambar yang di upload
+        if ($fileSampul->getError() == 4) {
+            $namasampul = 'default.jpg';
+        } else {
+
+
+            //Ambil Nama File
+            $namasampul = $fileSampul->getName();
+            // //Upload File dengan nama random
+            $namasampul = $fileSampul->getRandomName();
+            //Pindaknan gambar ke folder IMG
+            // $fileSampul->move('img');
+            $fileSampul->move('img', $namasampul);
+        }
+
+
+
+
+
         $slug = url_title($this->request->getVar('judul'), '-', true);
         $this->komikModel->save([
             'judul' => $this->request->getVar('judul'),
             'slug' => $slug,
             'penulis' => $this->request->getVar('penulis'),
             'penerbit' => $this->request->getVar('penerbit'),
-            'sampul' => $this->request->getVar('sampul')
+            'sampul' => $namasampul
         ]);
 
         session()->setFlashdata('Pesan', 'Data Berhasil di Tambahkan.');
@@ -110,9 +135,20 @@ class Komik extends BaseController
 
     public function delete($id)
     {
-        $this->komikModel->delete($id);
-        session()->setFlashdata('Pesan', 'Data Berhasil di Hapus.');
-        return redirect()->to(base_url() . '/komik');
+        //Cari Gambar Berdasar ID
+        $komik = $this->komikModel->find($id);
+        //Hapus Gambar
+        if ($komik['sampul'] == 'default.jpg') {
+            unlink('img/' . $komik['sampul']);
+            $this->komikModel->delete($id);
+            session()->setFlashdata('Pesan', 'Data Berhasil di Hapus.');
+            return redirect()->to(base_url() . '/komik');
+        } else {
+            unlink('img/' . $komik['sampul']);
+            $this->komikModel->delete($id);
+            session()->setFlashdata('Pesan', 'Data Berhasil di Hapus.');
+            return redirect()->to(base_url() . '/komik');
+        }
     }
 
     public function edit($slug)
@@ -137,6 +173,8 @@ class Komik extends BaseController
         } else {
             $rule_judul = 'required|is_unique[komik.judul]';
         }
+
+        // dd($komikLama);
         if (!$this->validate([
             'judul' => [
                 'rules' => $rule_judul,
@@ -159,18 +197,36 @@ class Komik extends BaseController
                 ]
             ],
             'sampul' =>  [
-                'rules' => 'required',
+                'rules' => 'max_size[sampul,1024]|is_image[sampul]|mime_in[sampul,image/jpg,image/jpeg,image/png]',
                 'errors' => [
-                    'required' => '{field} Komik harus Diisi!'
+                    'max_size' => 'Ukuran terlalu besar (Max 1MB)',
+                    'is_image' => 'yang anda pilih bukan gambar',
+                    'mine_in' => 'yang anda pilih bukan gambar'
+
                 ]
             ]
 
 
         ])) {
-            $validation = \Config\Services::validation();
+            // $validation = \Config\Services::validation();
             // dd($validation);
-            return redirect()->to('komik/create')->withInput()->with('validation', $validation);
+            // return redirect()->to('komik/create')->withInput()->with('validation', $validation);
+            return redirect()->to('komik/edit/' . $this->request->getVar('slug'))->withInput();
         }
+
+        $fileSampul = $this->request->getFile('sampul');
+
+        if ($fileSampul->getError() == 4) {
+            $namaFile = $this->request->getVar('sampullama');
+        } else {
+            $namaFile = $fileSampul->getRandomName();
+
+            $fileSampul->move('img', $namaFile);
+
+            unlink('img/' . $this->request->getVar('sampullama'));
+        }
+
+
         $slug = url_title($this->request->getVar('judul'), '-', true);
         $this->komikModel->save([
             'id' => $id,
@@ -178,7 +234,7 @@ class Komik extends BaseController
             'slug' => $slug,
             'penulis' => $this->request->getVar('penulis'),
             'penerbit' => $this->request->getVar('penerbit'),
-            'sampul' => $this->request->getVar('sampul')
+            'sampul' => $namaFile
         ]);
 
         session()->setFlashdata('Pesan', 'Data Berhasil di Ubah.');
