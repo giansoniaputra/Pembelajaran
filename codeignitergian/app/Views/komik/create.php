@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-10">
             <h2 class="my-4">Tambah Data Komik</h2>
-            <form action="/komik/save" method="POST">
+            <form action="/komik/save" method="POST" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="row mb-3">
                     <label for="judul" class="col-sm-2 col-form-label me-5">Judul</label>
@@ -36,12 +36,18 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="sampul" class="col-sm-2 col-form-label me-5">sampul</label>
                     <div class="col-sm-10">
-                        <input type="text" name="sampul" class="form-control <?= ($validation->hasError('penulis')) ? 'is-invalid' : ''; ?>" id="sampul" value="<?= old('sampul'); ?>">
-                        <div id="validationServer03Feedback" class="invalid-feedback">
-                            <?= $validation->getError('sampul'); ?>
+                        <div class="mb-3">
+                            <label for="sampul" class="form-label">Upload Sampul</label>
+                            <div class="col-sm-2">
+                                <img src="/img/default.jpg" class="img-thumbnail img-preview mb-3">
+                            </div>
+                            <input class="form-control <?= ($validation->hasError('sampul')) ? 'is-invalid' : ''; ?>" type="file" id="sampul" name="sampul" onchange="previewImg()">
+                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                <?= $validation->getError('sampul'); ?>
+                            </div>
                         </div>
+
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
