@@ -9,5 +9,5 @@ li.style.backgroundColor = 'blue';
 const p = document.querySelectorAll('p');
 for (let i = 0 ; i < 3 ; i++){
 p[i].style.backgroundColor = 'lightblue';
-p[i].innerHTML = 'KOntrol'
+p[i].innerHTML = 'Kontrol'
 }
