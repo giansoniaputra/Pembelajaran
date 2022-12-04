@@ -12,7 +12,7 @@ judul.innerHTML = 'Gian Sonia';
 
 const p = document.getElementsByTagName('p');
 for(let i = 0; i < p.length ; i++){
-    p[i].style.backgroundColor = 'lightgreen';
+    p[i].style.backgroundColor = 'lightblue';
 }
 
 //document.getElementsByClassName();
