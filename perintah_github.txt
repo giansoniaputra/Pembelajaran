@@ -1,0 +1,18 @@
+-- git status (Mengecek Status)
+-- git add . <file> (menambahkan file ke staging area)
+-- git commit -m "<pesan>" (Meng Commit File)
+-- git log -- <file> (untuk melihar commit terakhir)
+-- git checkout <lima digit dari commit hash> -- <file>
+
+
+-- git branch (Mengecek Branch)
+-- git branch <nama branch> (Menambah Brance baru)
+-- git checkout <nama branch> (Beralih branch)
+-- git merge <nama branch> (menggabungkan dua branch)
+-- git --merged (mengecek branch yang telah ter merge)
+-- git branch -d <nama branch> (menghapus branch yang sudah di merge)
+-- git branch -D <nama Branch> (menghapus branch walaupun belum di merge)
+-- git --all --decorate --oneline --graph (melihat grafik branch)
+
+-- git push (Menge Push update file dari git local ke GitHub)
+
